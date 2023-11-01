@@ -1,0 +1,91 @@
+{% extends 'hospital/homebase.html' %}
+{% load static %}
+{% block content %}
+
+
+<head>
+  <link rel="stylesheet" href="{% static 'colors.css' %}">
+  <link rel="stylesheet" href="{% static 'animation.css' %}">
+
+  <style media="screen">
+    .jumbotron {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      height: 500px;
+      background-image: url('{% static "images/bg.jpg" %}');
+      background-color: var(--back);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    .jumbotron h5,
+    h3 {
+      text-align: center;
+    }
+
+    .alert {
+      margin: 0px;
+    }
+
+    .lead{
+      position: absolute;
+      left: 43.5%;
+    }
+
+    .btnco{
+      background-color: #2910b8;
+      color: white;
+      transition: background-color 0.3s;
+    }
+
+    .btnco:hover{
+      background-color: #000000;
+    }
+
+    .svg{
+      right: 70%;
+    }
+
+  </style>
+</head>
+<br>
+
+
+<div class="jumbotron">
+  <br>
+  <!-- <h5 class="display-3 glow">You’ll Love the Way We Care for You</h5> -->
+  <p class="svg">
+    <h2 class="display-3 glow"><img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=400&size=35&pause=1000&color=000000&random=false&width=1500&height=100&lines=The+hospital+you+trust+to+care+for+those+you+love;Founded+on+faith.+Focused+on+family;Together%2C+performing+at+a+higher+standard"></h2>
+  </p>
+  <br><br><br><br><br>
+  <p>
+</div>
+
+<body>
+  <h3>Emergency?</h3>
+  <div class="container">
+  <div class="wrapper">
+    <button class="btn">
+      <div class="btn__bg">
+        <span class="btn__bg__layer btn__bg__layer-first"></span>
+        <span class="btn__bg__layer btn__bg__layer-second"></span>
+        <span class="btn__bg__layer btn__bg__layer-third"></span>
+      </div>
+      <span class="btn__text-out">Take Appointment</span>
+      <span class="btn__text-in">Take Appointment</span>
+    </button>
+  </div>
+  </div>
+  </body>
+  
+
+  <!-- <p class="lead">
+    <a class="btn btn-lg btnco" href="/patientclick" role="button">Take Appointment</a>
+  </p> -->
+  <br><br>
+<br><br><br><br>
+
+{% include "hospital/admin_doctor_patient_card.html" %}
+<br><br><br>
+{% endblock content %}
+
